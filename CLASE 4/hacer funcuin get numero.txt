@@ -1,0 +1,51 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
+{
+	//que el usuario no interactue con el espacio de memoria del resultado, sino en una memoria intermedia,
+	int bufferInt;
+	
+	//solo si pude validar el numero cambio el retorno a 0
+	int retorno =-1;
+	int cintentos=0;
+	
+	//me fijo que todos los punteros que recibi no sean NULL
+	//QUE MINIMO SEA MENOR O IGUAL QUE MAXIMO
+	//VERIFICAR QUE REINTENOTS SEA MAYOR O IGUAL A 0
+	
+	
+	
+	if (pResultado !=NULL && mensaje!=NULL && mensajeError!=NULL && minimo <= maximo && reintentos =>0)
+	{
+		do {
+			
+			if (cintentos == intentos) 
+			{
+				retorno =-2;
+				break;			}
+		}	
+		
+		printf ("%s\n", mensaje);
+		scanf ("%d",&bufferInt);
+		if (bufferInt >= minimo && bufferInt <=maximo)
+		{
+			retorno =o;
+			*pResultado = bufferInt;
+			break;
+		}
+		else 
+		{
+			printf ("%s", mensajeError);
+			
+		}
+		cintentos ++;
+		
+	}
+	
+	return retorno
+	
+}
